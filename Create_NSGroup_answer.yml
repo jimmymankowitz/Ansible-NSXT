@@ -1,0 +1,18 @@
+nsxt_ns_groups:
+- display_name: 'ns_test_criteria'
+  membership_criteria:
+    - resource_type: NSGroupTagExpression
+      target_type: 'LogicalSwitch'
+      scope: 'S1'
+      tag: 'T1'
+    - resource_type: NSGroupComplexExpression
+      expressions:
+        - resource_type: NSGroupTagExpression
+          target_type: 'LogicalPort'
+          scope: 'S2'
+          tag: 'T2'
+        - resource_type: NSGroupTagExpression
+          target_type: 'LogicalPort'
+          scope: '99'
+          tag: 'T1'
+  state: present
