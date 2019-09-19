@@ -1,0 +1,9 @@
+nsxt_vm_tag:
+- display_name: 'vm_tag'
+  external_id: 'ID-0'
+   - tags:
+     scope: 'os'
+     tag: 'win32'
+     scope: 'security'
+     tag: 'PCI'
+ State: present
